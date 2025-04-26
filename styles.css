@@ -1,0 +1,250 @@
+:root {
+	--dk-green: #2F4F4F; /* headings, footer background */
+	--wht: #F9FAFB; /* backgrounds and text on dark colors */
+	--md-blue: #8FCCF3; /* links, buttons, highlights */
+	--lt-red: #fee; /* background for invalid inputs */
+	--dk-red: #900; /* border for invalid inputs */
+	--lt-green: #efe; /* background for valid inputs */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--wht);
+	line-height: 1.5;
+}
+
+header, main, footer {
+	max-width: 1440px;
+	margin: auto;
+}
+
+h1, h2, h3 {
+	font-family: 'Fondamento', 'Comic Sans', cursive;
+}
+
+header {
+	background-color: var(--wht);
+}
+
+header div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header h1 {
+	color: var(--dk-green);
+	padding: 0 2rem;
+}
+
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+header nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+}
+
+header nav a {
+	padding: 0.5rem 1rem;
+	background-color: var(--dk-green);
+	color: var(--wht);
+	border: 1px solid var(--dk-green);
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+
+header nav a:hover, header nav a.active, header nav a:focus {
+	background-color: var(--wht);
+	color: var(--dk-green);
+}
+
+main > h2 {
+	text-align: center;
+}
+
+main > p {
+	max-width: 800px;
+	margin: auto;
+}
+
+main > img {
+	display: block;
+	margin: 1rem auto;
+}
+
+section {
+	max-width: 1000px;
+	margin: 2rem auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section > article {
+	margin: 1rem;
+	padding: 1rem;
+}
+
+section h3 {
+	text-align: center;
+}
+
+form {
+	max-width: 800px;
+	margin: auto;
+	background-color: var(--md-blue);
+	padding: 1rem 2rem;
+	display: flex;
+}
+
+form div {
+	flex-basis: 50%;
+	margin: 0.5rem;
+}
+
+label, input {
+	display: block;
+	width: 100%;
+}
+
+label {
+	margin-top: 1rem;
+}
+
+input:not([type="radio"]) {
+	height: 2rem;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--wht);
+	font-size: 1.1rem;
+	color: var(--dk-green);
+}
+
+input:not([type="radio"]):invalid {
+	border-color: var(--dk-red);
+	background-color: var(--lt-red);
+}
+
+input:not([type="radio"]):focus {
+	outline: none !important;
+	box-shadow: 0 0 10px var(--dk-green);
+}
+
+input:not([type="radio"]):valid {
+	border-color: var(--dk-green);
+	background-color: var(--lt-green);
+}
+
+fieldset {
+	background-color: var(--wht);
+	border: none;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	width: 100%;
+}
+
+fieldset input, fieldset label {
+	display: inline-block;
+	width: unset;
+}
+
+fieldset label {
+	margin-right: 1rem;
+}
+
+fieldset input {
+	height: 1.5rem;
+	width: 1.5rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid var(--dk-green);
+	border-radius: 50%;
+	vertical-align: bottom;
+	padding: 0.3rem;
+}
+
+fieldset input:checked {
+	background-color: var(--dk-green);
+}
+
+fieldset input:invalid {
+	border-color: var(--dk-red);
+	background-color: var(--lt-red);
+}
+
+textarea {
+	border: 1px solid var(--wht);
+	width: 100%;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	font-size: 1.1rem;
+	color: var(--dk-green);
+}
+
+textarea:focus {
+	outline: none !important;
+	box-shadow: 0 0 10px var(--dk-green);
+}
+
+textarea:invalid {
+	background-color: var(--lt-red);
+	border-color: var(--dk-red);
+}
+
+textarea:valid {
+	background-color: var(--lt-green);
+	border-color: var(--dk-green);
+}
+
+button {
+	padding: 1rem 2rem;
+	border: 1px solid var(--wht);
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	display: block;
+	margin: auto;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: var(--dk-green);
+	color: var(--wht);
+	width: 100%;
+}
+
+button:hover, button:focus {
+	background-color: var(--wht);
+	color: var(--dk-green);
+	border-color: var(--dk-green);
+}
+
+footer {
+	background-color: var(--dk-green);
+	color: var(--wht);
+	padding: 1rem;
+	margin-top: 3rem;
+}
+
+footer p, footer small {
+	text-align: center;
+}
+
+footer small {
+	display: block;
+}
